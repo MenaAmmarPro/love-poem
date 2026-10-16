@@ -8,7 +8,7 @@
   <meta property="og:title" content="Our Anthology — little poems for Mena">
   <meta property="og:description" content="A small shelf of poems for Mena — one for today, one you choose, one kept forever.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#faf7f5">
+  <meta name="theme-color" content="#090b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -16,21 +16,23 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-page="poem">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="https://menaammarpro.github.io/">All projects</a>
-        <a href="https://menaammarpro.github.io/love-phrases/">Phrases</a>
-        <a href="https://menaammarpro.github.io/love-art/">Art</a>
-      </nav>
-    </div>
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-phrases/">Phrases</a>
+      <a href="https://menaammarpro.github.io/love-art/">Art</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
       <p class="eyebrow">Collected, just for her</p>
-      <h1>Our anthology</h1>
+      <h1>Our <span>anthology</span></h1>
       <p class="subtitle">A poem for today, and every one after.</p>
     </section>
 
@@ -41,32 +43,30 @@
       <h2 id="poem-title" class="poem-title">—</h2>
       <pre id="poem-body" class="poem-body"></pre>
       <div class="poem-actions">
-        <button id="another" class="btn btn-primary" type="button">Another poem</button>
-        <button id="today" class="btn btn-ghost" type="button">Today's poem</button>
-        <button id="keep" class="btn btn-ghost" type="button">Keep it</button>
-        <button id="share" class="btn btn-ghost" type="button">Send this poem</button>
+        <button id="another" class="button button-primary" type="button">Another poem</button>
+        <button id="today" class="button button-ghost" type="button">Today's poem</button>
+        <button id="keep" class="button button-ghost" type="button">Keep it</button>
+        <button id="share" class="button button-ghost" type="button">Send this poem</button>
       </div>
       <p id="note" class="note">&nbsp;</p>
     </article>
 
-    <section class="panel stats">
+    <section class="stats">
       <div class="stat-card"><span class="stat-num" id="read">0</span><span class="stat-label">poems read</span></div>
       <div class="stat-card"><span class="stat-num" id="kept">0</span><span class="stat-label">kept</span></div>
       <div class="stat-card"><span class="stat-num" id="shelf-size">0</span><span class="stat-label">in the anthology</span></div>
     </section>
 
-    <section class="panel">
+    <section class="panel kept-panel">
       <h2>Kept poems</h2>
       <ul id="kept-list" class="kept-list"></ul>
-      <button id="clear" class="btn btn-ghost small" type="button">Clear kept</button>
+      <button id="clear" class="button button-ghost button-small" type="button">Clear kept</button>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
-      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
-    </div>
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
   </footer>
 
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
