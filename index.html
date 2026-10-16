@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Anthology — little poems for Mena</title>
+  <meta name="description" content="A small shelf of poems for Mena — one for today, one you choose, one kept forever.">
+  <meta property="og:title" content="Our Anthology — little poems for Mena">
+  <meta property="og:description" content="A small shelf of poems for Mena — one for today, one you choose, one kept forever.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#faf7f5">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="poem">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://menaammarpro.github.io/">All projects</a>
+        <a href="https://menaammarpro.github.io/love-phrases/">Phrases</a>
+        <a href="https://menaammarpro.github.io/love-art/">Art</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Collected, just for her</p>
+      <h1>Our anthology</h1>
+      <p class="subtitle">A poem for today, and every one after.</p>
+    </section>
+
+    <p id="arrive-note" class="arrive-note" hidden></p>
+
+    <article class="poem-card">
+      <p id="poem-date" class="poem-date"></p>
+      <h2 id="poem-title" class="poem-title">—</h2>
+      <pre id="poem-body" class="poem-body"></pre>
+      <div class="poem-actions">
+        <button id="another" class="btn btn-primary" type="button">Another poem</button>
+        <button id="today" class="btn btn-ghost" type="button">Today's poem</button>
+        <button id="keep" class="btn btn-ghost" type="button">Keep it</button>
+        <button id="share" class="btn btn-ghost" type="button">Send this poem</button>
+      </div>
+      <p id="note" class="note">&nbsp;</p>
+    </article>
+
+    <section class="panel stats">
+      <div class="stat-card"><span class="stat-num" id="read">0</span><span class="stat-label">poems read</span></div>
+      <div class="stat-card"><span class="stat-num" id="kept">0</span><span class="stat-label">kept</span></div>
+      <div class="stat-card"><span class="stat-num" id="shelf-size">0</span><span class="stat-label">in the anthology</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Kept poems</h2>
+      <ul id="kept-list" class="kept-list"></ul>
+      <button id="clear" class="btn btn-ghost small" type="button">Clear kept</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
